@@ -10,7 +10,6 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div className="App">
-          <Assignment />
           <nav>
             <ul>
               <li><NavLink to="/courses" exact>Courses</NavLink></li>
@@ -19,7 +18,8 @@ class App extends Component {
           </nav>
           <Switch>
             <Route path="/courses" component={Courses} />
-            <Route path="/users" component={Users} />
+            <Route path="/users" exact component={Users} />
+            <Route path="/" exact component={Assignment} />
             <Redirect from="/all-courses" to="/courses" />
             <Route render={() => <h1>Not Found</h1>} />
           </Switch>
