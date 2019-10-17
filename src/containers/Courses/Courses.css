@@ -12,4 +12,12 @@
     padding: 10px;
     margin: 10px;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+.Course a {
+    text-decoration: none;
+    color: #699eec;
+    font-weight: bold;
 }

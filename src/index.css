@@ -25,11 +25,12 @@ body {
   text-decoration: none;
   padding: 0.5rem;
   color: white;
+  font-weight: bold;
 }
 
 .App nav li a:hover,
 .App nav li a:active,
 .App nav li a.active {
-  background-color: white;
-  color: black;
+  background-color: #699eec;
+  color: white;
 }

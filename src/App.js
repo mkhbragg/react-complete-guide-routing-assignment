@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch, NavLink } from 'react-router-dom';
 
 import Assignment from './containers/Assignment/Assignment';
 import Courses from './containers/Courses/Courses';
+import Course from './containers/Course/Course';
 import Users from './containers/Users/Users';
 
 class App extends Component {
@@ -18,6 +19,7 @@ class App extends Component {
             </ul>
           </nav>
           <Switch>
+            <Route path="/courses/:id" component={Course} />
             <Route path="/courses" component={Courses} />
             <Route path="/users" component={Users} />
           </Switch>
