@@ -12,7 +12,7 @@ class App extends Component {
         <div className="App">
           <nav>
             <ul>
-              <li><NavLink to="/courses" exact>Courses</NavLink></li>
+              <li><NavLink to="/courses">Courses</NavLink></li>
               <li><NavLink to="/users" exact>Users</NavLink></li>
             </ul>
           </nav>
