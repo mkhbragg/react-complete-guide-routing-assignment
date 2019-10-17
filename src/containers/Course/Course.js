@@ -4,13 +4,27 @@ import './Course.css';
 
 class Course extends Component {
     state = {
-        title: null
+        title: null,
+        id: null
     };
 
-    componentWillMount() {
-        const query = new URLSearchParams(this.props.location.search);
-        for (let param of query.entries()) {
-            this.setState({ [param[0]]: param[1] });
+    componentDidMount() {
+        this.getQueryParams();
+    }
+
+    componentDidUpdate() {
+        this.getQueryParams();
+    }
+
+    getQueryParams () {
+        if ( this.props.match.params.id ) {
+            if (!this.state.id || (this.state.id && (this.state.id !== this.props.match.params.id))) {
+                const query = new URLSearchParams(this.props.location.search);
+                for (let param of query.entries()) {
+                    this.setState({ [param[0]]: param[1] });
+                }
+                this.setState({ id: this.props.match.params.id });
+            }
         }
     }
 
