@@ -7,13 +7,14 @@
 }
 
 .Course {
-    border: 1px solid #eee;
-    box-shadow: 0 2px 3px #ccc;
+    border: 1px solid white;
     padding: 10px;
     margin: 10px;
     cursor: pointer;
     display: flex;
     flex-direction: column;
+    height: 5rem;
+    justify-content: space-around;
 }
 
 .Course a {
