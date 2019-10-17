@@ -20,6 +20,7 @@ class App extends Component {
           <Switch>
             <Route path="/courses" component={Courses} />
             <Route path="/users" component={Users} />
+            <Route render={() => <h1>Not Found</h1>} />
           </Switch>
         </div>
       </BrowserRouter>
